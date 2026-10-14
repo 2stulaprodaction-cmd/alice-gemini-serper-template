@@ -190,7 +190,8 @@ function errorForUser(error) {
   }
 }
 
-export default async function handler(req, res) {
+eexport default async function handler(req, res) {
+  console.log("Alice webhook request received:", req.method, req.url, "hasBody=", !!req.body);
   if (req.method === "GET") {
     return res.status(200).json({
       ok: true,
